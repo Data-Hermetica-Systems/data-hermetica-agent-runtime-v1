@@ -30,3 +30,11 @@ pdfs/*.pdf
 .DS_Store
 Thumbs.db
 .vscode/settings.json
+
+# Python virtual environments
+.venv/
+agent-runtime/.venv/
+
+# Python cache
+__pycache__/
+*.pyc
