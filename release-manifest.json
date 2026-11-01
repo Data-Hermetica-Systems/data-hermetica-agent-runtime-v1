@@ -1,20 +1,59 @@
 {
   "release": "1.0.2",
-  "release_type": "local-model-first customs-entry preparation foundation",
+  "release_type": "local-model-first invoice extraction baseline and customs-entry plan",
   "engine": "invoice engine 1.3",
   "supervisor": "1.1",
-  "hts_pga_oga_dataset": "not included; external workstream placeholder only",
+  "upstream_archive_sha256": "f1adfc8a98b39f5392d86ce2102ed756fcc36e9f85a2b0612843961a91fc7c0d",
+  "verified_live_runtime_files": [
+    {
+      "path": "app/invoice_prepare.py",
+      "sha256": "45e9cd953b4535944f8aa8d121bf94ac9b50fcc7072891367e07262d0acf8eac"
+    },
+    {
+      "path": "app/invoice_supervisor.py",
+      "sha256": "6d2f5410268bcab075a03d8b81107c75af32d4393f3977421cd611837a63575a"
+    },
+    {
+      "path": "app/invoice_upgrade_output.py",
+      "sha256": "c0560010484519acd3b7a9e580b3aa882830925dc8e3cdceba1e0baf7d27d95b"
+    },
+    {
+      "path": "app/invoice_worker.py",
+      "sha256": "4e16741b1ad7d735307b814e24107dc707495e727b04bc297df51f57f3763d7b"
+    },
+    {
+      "path": "config/engine_config.json",
+      "sha256": "d294fa2820896ac34c0974b87ec706261d4e8351bf35e1f92ac9e1477ef2d012"
+    },
+    {
+      "path": "config/invoice_extraction_schema.json",
+      "sha256": "f6d4ee0d19c398a678e578e072f278abf9e6cf0ac6552a5fac1ff84c13a9cf47"
+    },
+    {
+      "path": "config/invoice_supervisor_config.json",
+      "sha256": "68857d433a063c45a0df398c9572f002cbc3ab8a76575167109ab150a6e40b99"
+    },
+    {
+      "path": "config/invoice_system_prompt_baseline.txt",
+      "sha256": "bbb05f3bd7de953ddfbb15913ddca18fc3ccc4e053f7579e00b858304728573a"
+    },
+    {
+      "path": "tests/test_unit_price_normalization.py",
+      "sha256": "b7804cf8000c6049506f54f8ddc16f06c30132be2611dca54d7e6340fb2c236a"
+    }
+  ],
+  "hts_pga_oga_dataset": "external workstream; not included",
   "filing_adapter": "not implemented",
   "files": [
     {
-      "path": "CHANGELOG.md",
-      "sha256": "e7bc23141a21f8a5f4a84502261a58be57867f13909fad610591fd65bca69d78",
-      "bytes": 3033
+      "path": ".gitignore",
+      "sha256": "e8a5d348ebd4233159ed3b26a0465891c3302e0d18ea8a558ef53f6a2ae94145",
+      "bytes": 679
     },
     {
-      "path": "README.md",
-      "sha256": "cd948573efd6ccd6bda962de9cf9929145961481fb87f5c2e9b234c15d5c09fb",
-      "bytes": 5232
+      "path": "CHANGELOG.md",
+      "sha256": "1992dabfb7be2e7901248118e8f009294faf2494cc8b48d2fdf4cd81ce6785cc",
+      "bytes": 3801
     },
     {
       "path": "PROJECT_CONTEXT.md",
@@ -22,24 +61,24 @@
       "bytes": 1643
     },
     {
+      "path": "README.md",
+      "sha256": "cd948573efd6ccd6bda962de9cf9929145961481fb87f5c2e9b234c15d5c09fb",
+      "bytes": 5232
+    },
+    {
       "path": "TODO.md",
       "sha256": "a0bf09e14fd9f02945c50e0b420e3e227cc9ecf7603a88ace944815ad75dbb3a",
       "bytes": 1479
     },
     {
-      "path": ".gitignore",
-      "sha256": "af6c911d5d2b9e92a3a5d0407021b3339b467bf723dfdf1b20675ff063dd89e2",
-      "bytes": 177
-    },
-    {
       "path": "app/invoice_prepare.py",
-      "sha256": "e6debfc5442613c2a3906e42e80843c5729ad15e3794e8b31343940cacff9b05",
-      "bytes": 7491
+      "sha256": "45e9cd953b4535944f8aa8d121bf94ac9b50fcc7072891367e07262d0acf8eac",
+      "bytes": 7481
     },
     {
       "path": "app/invoice_supervisor.py",
-      "sha256": "bba31dfa8a177da1da4bac7b4ce16743ae662f7214998aff97bcdaa6b07215a6",
-      "bytes": 21680
+      "sha256": "6d2f5410268bcab075a03d8b81107c75af32d4393f3977421cd611837a63575a",
+      "bytes": 21699
     },
     {
       "path": "app/invoice_upgrade_output.py",
@@ -48,8 +87,8 @@
     },
     {
       "path": "app/invoice_worker.py",
-      "sha256": "be22f35a42c2903b8c8b103d1a918b8970394e096fb6d93a21f402d80c650955",
-      "bytes": 43291
+      "sha256": "4e16741b1ad7d735307b814e24107dc707495e727b04bc297df51f57f3763d7b",
+      "bytes": 43287
     },
     {
       "path": "config/engine_config.json",
@@ -98,8 +137,8 @@
     },
     {
       "path": "docs/Acceptance-and-Operations.md",
-      "sha256": "26982bada8d90df715d4daabf962397f9fdf76cd15114252c5e590884b694c16",
-      "bytes": 17194
+      "sha256": "5d8d621b536349609f79ec2060b4fe6c9bcb5823b411032f7b4be0b683a48939",
+      "bytes": 5727
     },
     {
       "path": "docs/Architecture.md",
@@ -108,8 +147,8 @@
     },
     {
       "path": "docs/Client-Variables.md",
-      "sha256": "1a383fcdb7d19085026b77e3407ded67b9d8d727547c35ede8e53792f27fcd16",
-      "bytes": 3518
+      "sha256": "7b04b01fe0d947879e37ae39e9d9f5291d725f4513c10a305ac8dd0db3233067",
+      "bytes": 2744
     },
     {
       "path": "docs/Current-to-3461-7501-Architecture.md",
@@ -118,8 +157,8 @@
     },
     {
       "path": "docs/Customs-Entry-Roadmap.md",
-      "sha256": "5c4c8148af294a6a1966f2a26b19a3030577af95635ad3fbedd9fc0ca88c25c6",
-      "bytes": 7293
+      "sha256": "1328e7e852dd095dbc2f642f6e7efd10060de6fb768b97644b60d1a300204d7c",
+      "bytes": 7195
     },
     {
       "path": "docs/Manual-Chat-Prompt.md",
@@ -148,8 +187,13 @@
     },
     {
       "path": "docs/Release-Status.md",
-      "sha256": "9fdf168fd983a9a419e35f37ea0b5a8843b659f1e77796aa7e0e5e3a7861a826",
-      "bytes": 3548
+      "sha256": "891989343e87794e022fecaaf36f4bb1b5423f0b3f37395815e4a53c8dd1d2f6",
+      "bytes": 4462
+    },
+    {
+      "path": "docs/Repository-Structure.md",
+      "sha256": "660bba1235e53e32f6346b1aa7506f148003d25dcab968056f7bb40dd568529b",
+      "bytes": 1940
     },
     {
       "path": "power-automate/EXPORT-REQUIRED.md",
@@ -162,5 +206,5 @@
       "bytes": 4168
     }
   ],
-  "runtime_source_based_on": "DataHermetica Invoice Engine Master 1.0.2, adapted for the customs-entry plan"
+  "runtime_source_based_on": "DataHermetica Invoice Engine Master 1.0.2"
 }

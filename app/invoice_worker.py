@@ -82,7 +82,7 @@ class ContextBudgetFailure(RuntimeError):
 
 
 class RuntimeConfigurationFailure(RuntimeError):
-    """LM Studio is not configured for local model-based invoice extraction."""
+    """LM Studio is not configured for deterministic invoice extraction."""
 
 
 def utc_now() -> str:

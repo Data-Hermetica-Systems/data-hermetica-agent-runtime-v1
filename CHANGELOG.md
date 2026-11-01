@@ -34,3 +34,11 @@ Initial master package combining invoice engine v1.2, local supervisor v1.1, dep
 - Clarified that Poppler supplies selectable PDF text and rendered page images to the local model; no OCR engine is used.
 - Kept deterministic code for bounded normalization, schema/business validation, reconciliation checks and exception routing, not variable invoice parsing.
 - Refreshed project context, prerequisites, architecture and release manifest. HTS/PGA/OGA, classification and 3461/7501 work remains planned and dataset-gated.
+
+## Live audit alignment — November 1, 2026
+
+- Reconciled repository release status with the read-only live directory audit: installed 1.0.2 source files match the package manifest and the supervisor was running; this is not a fresh accuracy test.
+- Documented the separate live runtime root and excluded state, work, customer documents, logs, backups and generated artifacts from source control.
+- Redacted invoice identifiers, file names, document hashes and user-specific installation details from operational acceptance documentation.
+- Clarified that the fresh installer differs from the separate in-place updater, whose source was not included in the audited ZIP.
+- Added a source tree/data-boundary guide and expanded ignore rules for live runtime artifacts.

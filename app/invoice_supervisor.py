@@ -1,6 +1,6 @@
 """Run the invoice preparation and extraction worker from a synced intake folder.
 
-This is a local Windows supervisor. It polls the configured
+This is a local Windows supervisor, not an OCR engine. It polls the configured
 OneDrive-synced folder, waits for stable files, prepares each document, and
 invokes the existing one-invoice LM Studio worker. It never batches invoice
 items and never removes source files.

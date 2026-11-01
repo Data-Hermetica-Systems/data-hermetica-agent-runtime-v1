@@ -1,15 +1,51 @@
-# Environment and secrets
-.env
-.env.local
-*.log
+# Python environments and bytecode
+.venv/
+venv/
+__pycache__/
+*.py[cod]
 
-# Scratch files
-.scratch/
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.secret
+*.secret.*
+.secrets/
+
+# Live engine runtime: never commit customer data, mutable state or logs
+state/
+work/
+logs/
+quarantine/
+backup/
+backups/
+release/
+output_staging/
+requests/
+responses/
+prepared/
+claimed/
+
+# Customer documents and generated results
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.csv
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+*.lock
 
 # OS/editor files
 .DS_Store
 Thumbs.db
 .vscode/settings.json
-# Python bytecode
-__pycache__/
-*.py[cod]
+
+# Permit only explicitly sanitized test fixtures when approved
+!tests/fixtures/sanitized-*.pdf
+!tests/fixtures/sanitized-*.csv

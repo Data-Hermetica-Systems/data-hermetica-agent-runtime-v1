@@ -2,7 +2,7 @@
 
 ## Where the project is now
 
-The current baseline is the local invoice engine 1.0.2. Outlook and Power Automate cloud move qualifying attachments to OneDrive; OneDrive sync places them on the Windows PC; a Python supervisor and Poppler prepare PDFs; a local LM Studio model extracts invoice fields to structured outputs; deterministic code normalizes and validates output. The reference deployment has user-confirmed multi-invoice and image-bearing-PDF runs. Unit-price regression tests are packaged. Exact model artifact identity, comprehensive field accuracy, Windows installer acceptance, Power Automate export, restart recovery, and broader supplier coverage remain open acceptance items.
+The November 1, 2026 read-only directory audit verified the 1.0.2 runtime is installed, its Task Scheduler supervisor was running, the configured local model was visible, and nine installed runtime source/config/test files matched the release manifest. This was not a fresh invoice accuracy test and did not query job-state databases. The local model is the primary reader for variable invoice layouts; deterministic code performs validation, supported normalization, state tracking and routing. The included regression suite is limited to unit-price normalization.
 
 The retired JavaScript/Tesseract invoice-family prototype has been removed. The active model-led extraction code is in `app/`: the local model interprets variable layouts and bounded code validates/normalizes results. No tested implementation currently creates customs entry forms or determines HTS/PGA/OGA requirements.
 
