@@ -1,32 +1,51 @@
-# Dependencies
-node_modules/
+# Python environments and bytecode
+.venv/
+venv/
+__pycache__/
+*.py[cod]
 
-# Environment and secrets
+# Local configuration and credentials
 .env
-.env.local
-*.log
+.env.*
+!.env.example
+*.secret
+*.secret.*
+.secrets/
 
-# Generated runtime outputs
-images/*
-ocr/*
-outputs/*
+# Live engine runtime: never commit customer data, mutable state or logs
+state/
+work/
+logs/
+quarantine/
+backup/
+backups/
+release/
+output_staging/
+requests/
+responses/
+prepared/
+claimed/
 
-# Keep folder placeholders
-!images/.gitkeep
-!ocr/.gitkeep
-!outputs/.gitkeep
-
-# Weight reconciliation backups
-*.before-weight-reconciliation
-
-# Private/source PDFs unless sanitized
-pdfs/*.pdf
-!pdfs/sanitized-*.pdf
-
-# Scratch files
-.scratch/
+# Customer documents and generated results
+*.pdf
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.csv
+*.sqlite
+*.sqlite3
+*.db
+*.db-shm
+*.db-wal
+*.lock
 
 # OS/editor files
 .DS_Store
 Thumbs.db
 .vscode/settings.json
+
+# Permit only explicitly sanitized test fixtures when approved
+!tests/fixtures/sanitized-*.pdf
+!tests/fixtures/sanitized-*.csv

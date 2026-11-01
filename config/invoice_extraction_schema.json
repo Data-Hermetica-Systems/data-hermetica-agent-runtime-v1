@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Data Hermetica Invoice Extraction",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["invoices"],
+  "properties": {
+    "invoices": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["invoice_details", "merchandise_items"],
+        "properties": {
+          "invoice_details": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "invoice_number",
+              "invoice_date",
+              "customer_number",
+              "ship_to",
+              "bill_to",
+              "shipper_details"
+            ],
+            "properties": {
+              "invoice_number": {"type": ["string", "null"]},
+              "invoice_date": {"type": ["string", "null"]},
+              "customer_number": {"type": ["string", "null"]},
+              "ship_to": {"type": ["string", "null"]},
+              "bill_to": {"type": ["string", "null"]},
+              "shipper_details": {"type": ["string", "null"]}
+            }
+          },
+          "merchandise_items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "item",
+                "product_number",
+                "material_description",
+                "unit",
+                "quantity",
+                "unit_price_usd",
+                "unit_price_raw",
+                "price_basis_quantity",
+                "price_basis_unit",
+                "total_amount_usd",
+                "country_of_origin",
+                "delivery_note",
+                "gross_weight",
+                "net_weight",
+                "commodity_code",
+                "shipment_number"
+              ],
+              "properties": {
+                "item": {"type": ["string", "null"]},
+                "product_number": {"type": ["string", "null"]},
+                "material_description": {"type": ["string", "null"]},
+                "unit": {"type": ["string", "null"]},
+                "quantity": {"type": ["string", "null"]},
+                "unit_price_usd": {
+                  "type": ["string", "null"],
+                  "pattern": "^\\d+(?:\\.\\d+)?$"
+                },
+                "unit_price_raw": {"type": ["string", "null"]},
+                "price_basis_quantity": {
+                  "type": ["string", "null"],
+                  "pattern": "^\\d+(?:\\.\\d+)?$"
+                },
+                "price_basis_unit": {"type": ["string", "null"]},
+                "total_amount_usd": {"type": ["string", "null"]},
+                "country_of_origin": {"type": ["string", "null"]},
+                "delivery_note": {"type": ["string", "null"]},
+                "gross_weight": {"type": ["string", "null"]},
+                "net_weight": {"type": ["string", "null"]},
+                "commodity_code": {"type": ["string", "null"]},
+                "shipment_number": {"type": ["string", "null"]}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "release": "1.0.2",
+  "release_type": "local-model-first invoice extraction baseline and customs-entry plan",
+  "engine": "invoice engine 1.3",
+  "supervisor": "1.1",
+  "upstream_archive_sha256": "f1adfc8a98b39f5392d86ce2102ed756fcc36e9f85a2b0612843961a91fc7c0d",
+  "verified_live_runtime_files": [
+    {
+      "path": "app/invoice_prepare.py",
+      "sha256": "45e9cd953b4535944f8aa8d121bf94ac9b50fcc7072891367e07262d0acf8eac"
+    },
+    {
+      "path": "app/invoice_supervisor.py",
+      "sha256": "6d2f5410268bcab075a03d8b81107c75af32d4393f3977421cd611837a63575a"
+    },
+    {
+      "path": "app/invoice_upgrade_output.py",
+      "sha256": "c0560010484519acd3b7a9e580b3aa882830925dc8e3cdceba1e0baf7d27d95b"
+    },
+    {
+      "path": "app/invoice_worker.py",
+      "sha256": "4e16741b1ad7d735307b814e24107dc707495e727b04bc297df51f57f3763d7b"
+    },
+    {
+      "path": "config/engine_config.json",
+      "sha256": "d294fa2820896ac34c0974b87ec706261d4e8351bf35e1f92ac9e1477ef2d012"
+    },
+    {
+      "path": "config/invoice_extraction_schema.json",
+      "sha256": "f6d4ee0d19c398a678e578e072f278abf9e6cf0ac6552a5fac1ff84c13a9cf47"
+    },
+    {
+      "path": "config/invoice_supervisor_config.json",
+      "sha256": "68857d433a063c45a0df398c9572f002cbc3ab8a76575167109ab150a6e40b99"
+    },
+    {
+      "path": "config/invoice_system_prompt_baseline.txt",
+      "sha256": "bbb05f3bd7de953ddfbb15913ddca18fc3ccc4e053f7579e00b858304728573a"
+    },
+    {
+      "path": "tests/test_unit_price_normalization.py",
+      "sha256": "b7804cf8000c6049506f54f8ddc16f06c30132be2611dca54d7e6340fb2c236a"
+    }
+  ],
+  "hts_pga_oga_dataset": "external workstream; not included",
+  "filing_adapter": "not implemented",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "e8a5d348ebd4233159ed3b26a0465891c3302e0d18ea8a558ef53f6a2ae94145",
+      "bytes": 679
+    },
+    {
+      "path": "CHANGELOG.md",
+      "sha256": "1992dabfb7be2e7901248118e8f009294faf2494cc8b48d2fdf4cd81ce6785cc",
+      "bytes": 3801
+    },
+    {
+      "path": "PROJECT_CONTEXT.md",
+      "sha256": "9213d99787c0d13bd0b41299f89a2e2b6add3146cb94cb611f16913e3d49dc55",
+      "bytes": 1643
+    },
+    {
+      "path": "README.md",
+      "sha256": "cd948573efd6ccd6bda962de9cf9929145961481fb87f5c2e9b234c15d5c09fb",
+      "bytes": 5232
+    },
+    {
+      "path": "TODO.md",
+      "sha256": "a0bf09e14fd9f02945c50e0b420e3e227cc9ecf7603a88ace944815ad75dbb3a",
+      "bytes": 1479
+    },
+    {
+      "path": "app/invoice_prepare.py",
+      "sha256": "45e9cd953b4535944f8aa8d121bf94ac9b50fcc7072891367e07262d0acf8eac",
+      "bytes": 7481
+    },
+    {
+      "path": "app/invoice_supervisor.py",
+      "sha256": "6d2f5410268bcab075a03d8b81107c75af32d4393f3977421cd611837a63575a",
+      "bytes": 21699
+    },
+    {
+      "path": "app/invoice_upgrade_output.py",
+      "sha256": "c0560010484519acd3b7a9e580b3aa882830925dc8e3cdceba1e0baf7d27d95b",
+      "bytes": 3359
+    },
+    {
+      "path": "app/invoice_worker.py",
+      "sha256": "4e16741b1ad7d735307b814e24107dc707495e727b04bc297df51f57f3763d7b",
+      "bytes": 43287
+    },
+    {
+      "path": "config/engine_config.json",
+      "sha256": "d294fa2820896ac34c0974b87ec706261d4e8351bf35e1f92ac9e1477ef2d012",
+      "bytes": 591
+    },
+    {
+      "path": "config/invoice_extraction_schema.json",
+      "sha256": "f6d4ee0d19c398a678e578e072f278abf9e6cf0ac6552a5fac1ff84c13a9cf47",
+      "bytes": 3224
+    },
+    {
+      "path": "config/invoice_supervisor_config.json",
+      "sha256": "68857d433a063c45a0df398c9572f002cbc3ab8a76575167109ab150a6e40b99",
+      "bytes": 318
+    },
+    {
+      "path": "config/invoice_system_prompt_baseline.txt",
+      "sha256": "bbb05f3bd7de953ddfbb15913ddca18fc3ccc4e053f7579e00b858304728573a",
+      "bytes": 23097
+    },
+    {
+      "path": "data/reference/README.md",
+      "sha256": "630947ecda4e2a2f0302a258d6bfa6757623f8c6c819942542ca6cd6201711de",
+      "bytes": 1085
+    },
+    {
+      "path": "deployment/Install-Engine.ps1",
+      "sha256": "b95abd3fb8939cec30545ca3a59c5e103e878aa4354e34e69c7c80ed7434aa9a",
+      "bytes": 1845
+    },
+    {
+      "path": "deployment/Register-SupervisorTask.ps1",
+      "sha256": "7d7875892a1690d20ae9c8645f2c0088fd994e80051329ba15e655ace1759301",
+      "bytes": 1469
+    },
+    {
+      "path": "deployment/Test-EngineEnvironment.ps1",
+      "sha256": "57f9823100094d5a1da450c1dacca56c47e06c139a16045d6db91691d34cdfba",
+      "bytes": 1026
+    },
+    {
+      "path": "deployment/Verify-Release.ps1",
+      "sha256": "1d2308adbe3a520a86fd96b319e99c5f0fe81bde9fd8a7e130082d384503c1d8",
+      "bytes": 616
+    },
+    {
+      "path": "docs/Acceptance-and-Operations.md",
+      "sha256": "5d8d621b536349609f79ec2060b4fe6c9bcb5823b411032f7b4be0b683a48939",
+      "bytes": 5727
+    },
+    {
+      "path": "docs/Architecture.md",
+      "sha256": "bc44352d56738933608c336fde4dab453b910980faa94f802600448406aa8d88",
+      "bytes": 4027
+    },
+    {
+      "path": "docs/Client-Variables.md",
+      "sha256": "7b04b01fe0d947879e37ae39e9d9f5291d725f4513c10a305ac8dd0db3233067",
+      "bytes": 2744
+    },
+    {
+      "path": "docs/Current-to-3461-7501-Architecture.md",
+      "sha256": "99b1386ecfe87e3ebabad4fc7f09d3e091241b6b938c4f19638edfb900a76afb",
+      "bytes": 9133
+    },
+    {
+      "path": "docs/Customs-Entry-Roadmap.md",
+      "sha256": "1328e7e852dd095dbc2f642f6e7efd10060de6fb768b97644b60d1a300204d7c",
+      "bytes": 7195
+    },
+    {
+      "path": "docs/Manual-Chat-Prompt.md",
+      "sha256": "2cfafc2b02ab91c8cac387434847335536f42de132acfa250b220bfbc0def2f9",
+      "bytes": 2387
+    },
+    {
+      "path": "docs/Model-Request-Configuration.md",
+      "sha256": "cee114baa002a60151704f05c5a7aaf3afcb120c9aeeef7a9bc7c5317d8327bb",
+      "bytes": 3831
+    },
+    {
+      "path": "docs/Official-References.md",
+      "sha256": "0d9bef5e2bfa538b7c3d863cb97d66ca1f3a2c24cb0e3090ae590ae36408b449",
+      "bytes": 2213
+    },
+    {
+      "path": "docs/Power-Automate-Setup.md",
+      "sha256": "26d141a53e8e290357dcf8b2b748c8797da326dcb380f9e31a4c13ccd1233a5e",
+      "bytes": 3851
+    },
+    {
+      "path": "docs/Prerequisites.md",
+      "sha256": "d637522e19d69b0ad6d0baadf307a006c76133813caf298fcbf2a176897fa5e4",
+      "bytes": 2314
+    },
+    {
+      "path": "docs/Release-Status.md",
+      "sha256": "891989343e87794e022fecaaf36f4bb1b5423f0b3f37395815e4a53c8dd1d2f6",
+      "bytes": 4462
+    },
+    {
+      "path": "docs/Repository-Structure.md",
+      "sha256": "660bba1235e53e32f6346b1aa7506f148003d25dcab968056f7bb40dd568529b",
+      "bytes": 1940
+    },
+    {
+      "path": "power-automate/EXPORT-REQUIRED.md",
+      "sha256": "df2ec073492ddc5ef4d879b41e724b0f2c2aad59ccd45210086224cd22773b4e",
+      "bytes": 742
+    },
+    {
+      "path": "tests/test_unit_price_normalization.py",
+      "sha256": "b7804cf8000c6049506f54f8ddc16f06c30132be2611dca54d7e6340fb2c236a",
+      "bytes": 4168
+    }
+  ],
+  "runtime_source_based_on": "DataHermetica Invoice Engine Master 1.0.2"
+}
