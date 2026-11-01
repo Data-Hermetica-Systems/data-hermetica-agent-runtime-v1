@@ -1,9 +1,0 @@
-{
-  "name": "data-hermetica-customs-entry-engine",
-  "version": "1.0.2",
-  "private": true,
-  "description": "Local-first invoice evidence extraction foundation for customs entry preparation",
-  "scripts": {
-    "test": "python -m unittest discover -s tests -p 'test_*.py' -v"
-  }
-}

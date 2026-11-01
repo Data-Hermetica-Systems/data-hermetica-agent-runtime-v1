@@ -25,7 +25,7 @@ flowchart TD
   K -.-> T["Job state<br/>state\\jobs.db"]
 ```
 
-Paths below `app`, `work`, `logs`, and `state` in the diagram are relative to `H:\DataHermetica\InvoiceEngine`. SHA256 is a runtime content hash, not a literal folder name to create. Image rendering is not OCR: this implementation sends rendered images to the model as base64 image content. No Tesseract or PaddleOCR stage is wired into these source files.
+Paths below `app`, `work`, `logs`, and `state` in the diagram are relative to `H:\DataHermetica\InvoiceEngine`. SHA256 is a runtime content hash, not a literal folder name to create. The active invoice model receives page text extracted by Poppler or rendered page images directly; there is no OCR stage. The model performs the variable-layout invoice reading.
 
 “One extraction request” means one complete-document extraction call. A separate tiny JSON readiness inference also runs beforehand. Do not describe this as exactly one HTTP request total.
 

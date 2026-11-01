@@ -19,7 +19,7 @@ from pathlib import Path
 
 
 SUPPORTED = {".pdf", ".png", ".jpg", ".jpeg"}
-TEXT_THRESHOLD = 80  # Conservative indicator, not a proof of OCR quality.
+TEXT_THRESHOLD = 80  # Routes pages with little selectable text to the vision model.
 
 
 def run_binary(args: list[str], timeout: int = 120) -> bytes:

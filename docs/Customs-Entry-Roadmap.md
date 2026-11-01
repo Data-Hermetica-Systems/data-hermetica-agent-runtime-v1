@@ -4,7 +4,7 @@
 
 The current baseline is the local invoice engine 1.0.2. Outlook and Power Automate cloud move qualifying attachments to OneDrive; OneDrive sync places them on the Windows PC; a Python supervisor and Poppler prepare PDFs; a local LM Studio model extracts invoice fields to structured outputs; deterministic code normalizes and validates output. The reference deployment has user-confirmed multi-invoice and image-bearing-PDF runs. Unit-price regression tests are packaged. Exact model artifact identity, comprehensive field accuracy, Windows installer acceptance, Power Automate export, restart recovery, and broader supplier coverage remain open acceptance items.
 
-The older JavaScript/Tesseract invoice-family prototype is retained under `legacy/` for traceability and is not the active pipeline. No tested implementation currently creates customs entry forms or determines HTS/PGA/OGA requirements.
+The retired JavaScript/Tesseract invoice-family prototype has been removed. The active model-led extraction code is in `app/`: the local model interprets variable layouts and bounded code validates/normalizes results. No tested implementation currently creates customs entry forms or determines HTS/PGA/OGA requirements.
 
 ## End goal
 

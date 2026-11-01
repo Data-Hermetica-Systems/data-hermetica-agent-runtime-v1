@@ -1,12 +1,12 @@
 # Data Hermetica Customs Entry Automation Engine
 
-This repository is evolving from local invoice extraction into an evidence-led U.S. import customs-entry preparation system. The current working baseline is invoice engine 1.0.2: Microsoft Power Automate email intake, OneDrive sync, Windows Python supervisor, Poppler PDF preparation, and LM Studio local-model extraction into validated JSON/CSV. It does **not** yet classify HTS codes, determine PGA/OGA requirements, or populate CBP Forms 7501/3461.
+This repository contains the local-model-first Data Hermetica invoice engine and its plan to prepare U.S. customs entries. The active invoice engine uses Microsoft Power Automate email intake, OneDrive sync, a Windows Python supervisor, Poppler for PDF text extraction/page rendering, and LM Studio local vision-language inference to extract highly variable invoice layouts into validated JSON/CSV. The local vision-language model is the primary extraction mechanism for highly variable invoice layouts; deterministic code performs bounded normalization and validation, not invoice parsing. The system does **not** yet classify HTS codes, determine PGA/OGA requirements, or populate CBP Forms 7501/3461.
 
 ## Current state
 
 The release's reference deployment is user-confirmed to process multiple invoices, including image-bearing PDFs. It has structural and unit-price tests. Field accuracy remains supplier- and field-dependent and requires ground-truth review. The packaged PowerShell installation wrappers have not been accepted on the reference Windows machine. The Power Automate flow export is not included.
 
-The tested extraction baseline is in `app/`, `config/`, `deployment/`, and `tests/`. See `docs/Release-Status.md` and `docs/Architecture.md` for evidence and limitations. Do not interpret a valid schema or matching row count as proof that values are correct.
+The tested extraction baseline is in `app/`, `config/`, `deployment/`, and `tests/`. See `docs/Release-Status.md` and `docs/Architecture.md` for evidence and limitations. The model reads page text and rendered images directly; the runtime does not run Tesseract or another OCR engine. Do not interpret a valid schema or matching row count as proof that values are correct.
 
 ## Target workflow
 
@@ -47,4 +47,4 @@ No cloud model API is required for the unit tests. The invoice pipeline itself n
 - `power-automate/` cloud flow setup and export requirements
 - `tests/` executable regression tests
 - `data/reference/` placeholder contract for future approved HTS/PGA/OGA data; no real dictionary is included
-- `src/` and existing sanitized samples contain the earlier JavaScript prototype; Python engine under `app/` is the active local-model runtime
+- Python engine under `app/` is the active local-model runtime; retired JavaScript/Tesseract family-parser files, test fixtures, and Node package manifest have been removed

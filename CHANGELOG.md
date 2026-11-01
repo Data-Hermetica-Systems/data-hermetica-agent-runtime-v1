@@ -26,3 +26,11 @@ Documentation and acceptance-evidence update only. Runtime scripts, prompts, sch
 ## 1.0.0 — October 31, 2026
 
 Initial master package combining invoice engine v1.2, local supervisor v1.1, deployment wrappers, documentation, tests, and release manifest.
+
+## Customs-entry plan alignment — November 1, 2026
+
+- Made the Python/LM Studio local vision-language invoice extractor the sole active invoice pipeline in the repository.
+- Removed the retired JavaScript/Tesseract OCR, invoice-family segmentation, and fixed-layout row builders, along with their package manifest, prompts, and sample artifacts.
+- Clarified that Poppler supplies selectable PDF text and rendered page images to the local model; no OCR engine is used.
+- Kept deterministic code for bounded normalization, schema/business validation, reconciliation checks and exception routing, not variable invoice parsing.
+- Refreshed project context, prerequisites, architecture and release manifest. HTS/PGA/OGA, classification and 3461/7501 work remains planned and dataset-gated.

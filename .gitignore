@@ -1,27 +1,7 @@
-# Dependencies
-node_modules/
-
 # Environment and secrets
 .env
 .env.local
 *.log
-
-# Generated runtime outputs
-images/*
-ocr/*
-outputs/*
-
-# Keep folder placeholders
-!images/.gitkeep
-!ocr/.gitkeep
-!outputs/.gitkeep
-
-# Weight reconciliation backups
-*.before-weight-reconciliation
-
-# Private/source PDFs unless sanitized
-pdfs/*.pdf
-!pdfs/sanitized-*.pdf
 
 # Scratch files
 .scratch/

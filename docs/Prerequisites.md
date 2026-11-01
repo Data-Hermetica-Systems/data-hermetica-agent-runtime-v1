@@ -13,7 +13,7 @@ Review the package metadata/version before installing. Reopen PowerShell after P
 
 4. Install OneDrive for Business and sign in to the same account used by the flow. Select the client's sync location. In File Explorer mark Incoming “Always keep on this device” to make files locally available [R3]. Record sync health; a locally created result folder is not evidence that the cloud upload has finished.
 5. Install LM Studio from its official site [R4], install the client-approved model and start its local server. Record app version, inference runtime/backend, model file and checksum. The exact original LM Studio/Python installers and versions are unavailable, so this is a replication prerequisite, not an invented installation transcript.
-6. This code uses Python standard-library modules. Do not add unrelated OCR, web framework, cloud SDK, CUDA, or vector database dependencies to reproduce the baseline.
+6. This code uses Python standard-library modules. Do not add an OCR engine: Poppler extracts selectable PDF text and renders image pages, which the local vision model reads. A web framework, cloud SDK, CUDA toolkit, and vector database are not baseline dependencies.
 
 Run this inventory and retain its output:
 
