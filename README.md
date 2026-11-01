@@ -1,57 +1,50 @@
-# Data Hermetica Private Document Intelligence Pipeline v0.1
+# Data Hermetica Customs Entry Automation Engine
 
-A local-first private document processing system for extracting structured line-item data from logistics, customs, commercial, and proforma invoice PDFs.
+This repository is evolving from local invoice extraction into an evidence-led U.S. import customs-entry preparation system. The current working baseline is invoice engine 1.0.2: Microsoft Power Automate email intake, OneDrive sync, Windows Python supervisor, Poppler PDF preparation, and LM Studio local-model extraction into validated JSON/CSV. It does **not** yet classify HTS codes, determine PGA/OGA requirements, or populate CBP Forms 7501/3461.
 
-The system converts invoice PDFs into validated canonical JSON and CSV outputs using local PDF rendering, OCR, invoice-family recognition, item segmentation, deterministic parsing, field normalization, and validation.
+## Current state
 
----
+The release's reference deployment is user-confirmed to process multiple invoices, including image-bearing PDFs. It has structural and unit-price tests. Field accuracy remains supplier- and field-dependent and requires ground-truth review. The packaged PowerShell installation wrappers have not been accepted on the reference Windows machine. The Power Automate flow export is not included.
 
-## Current Status
+The tested extraction baseline is in `app/`, `config/`, `deployment/`, and `tests/`. See `docs/Release-Status.md` and `docs/Architecture.md` for evidence and limitations. Do not interpret a valid schema or matching row count as proof that values are correct.
 
-Working end-to-end.
+## Target workflow
 
-Current benchmark run:
+1. **Receive and preserve source documents**: Outlook + Power Automate cloud flow; save original attachments to OneDrive Incoming, sync to the Windows workstation, hash and track each source.
+2. **Extract invoice and trade evidence locally**: Python 3.12, Poppler, LM Studio local inference (reference model alias `qwen/qwen3.8-27b`; verify exact model, quantization and hash on the target PC). Produce normalized invoice lines and retain source/page evidence.
+3. **Join shipment evidence**: add bills of lading, packing lists and other entry documents; reconcile quantities, values, weights, parties, origin and transport data deterministically, with exceptions for human review.
+4. **Match HTS and PGA/OGA requirements**: integrate the separately maintained authoritative, versioned dataset when supplied. Until then, use only the explicit placeholder contract in `data/reference/README.md`; never invent tariff codes or agency flags. Candidate matching must return evidence, dataset version and confidence/review state.
+5. **Prepare CBP Forms 3461 and 7501**: map only verified source fields and reviewed classifications to form fields, validate totals and cross-form consistency, create draft outputs, and require qualified human review. Automated filing/transmission is out of scope until separately authorized and validated.
+6. **Measure accuracy and operate**: compare every required field to labeled examples and official form rules; retain audit trail, release/version provenance, review outcomes and acceptance evidence.
 
-| Metric | Result |
-|---|---:|
-| PDF invoices processed | 5 |
-| Invoice families supported | 3 |
-| Expected canonical rows | 58 |
-| Extracted canonical rows | 58 |
-| Validation flags | 0 |
-| Row counts matched | true |
-| Master JSON output | created |
-| Master CSV output | created |
-| Runtime | about 53 seconds |
+See [Customs Entry Roadmap](docs/Customs-Entry-Roadmap.md) for software, PowerShell steps, local models, tests and Qdrant decision by phase.
 
----
+## Develop and test
 
-## Supported Invoice Families
+On Windows PowerShell with Python 3.12 and Poppler available on PATH:
 
-| Invoice Family | Description | Parser Type |
-|---|---|---|
-| Honeywell multiline proforma invoice | Multi-page invoice with repeated line items, material numbers, quantities, unit prices, amounts, commodity codes, origin, delivery notes, shipment numbers, order numbers, and weights | OCR segmentation + deterministic canonical row builder |
-| Solstice customs invoice ISO tank layout | Customs-value invoice with ISO tank customs value and residual contained material | Special-family deterministic parser |
-| Navin India commercial invoice KG-rate layout | India export commercial invoice with container number, KG quantity, USD/KG rate, HSN code, origin, vessel, and total amount | Special-family deterministic parser |
+```powershell
+python -m unittest discover -s tests -p 'test_*.py' -v
+if ($LASTEXITCODE -ne 0) { throw 'Tests failed.' }
+```
 
----
+No cloud model API is required for the unit tests. The invoice pipeline itself needs a running LM Studio OpenAI-compatible local server and a compatible local model. See `docs/Prerequisites.md` and `docs/Acceptance-and-Operations.md` before installing or running against real invoices.
 
-## Pipeline Overview
+## Project boundaries
 
-```text
-PDF invoices
-→ Poppler page rendering
-→ Tesseract OCR
-→ OCR text output
-→ invoice-family recognition
-→ item segmentation
-→ header metadata extraction
-→ deterministic canonical row building
-→ special-family parsing
-→ field normalization
-→ validation
-→ individual JSON output
-→ individual CSV output
-→ master JSON output
-→ master CSV output
-→ master pipeline summary
+- Keep inference local through LM Studio on the Windows workstation. Power Automate moves documents; it does not send their contents to an AI service.
+- Use deterministic validation and human approval for legal/customs decisions.
+- The HTS/PGA/OGA source data is an external dependency being developed separately. Placeholder data is not suitable for production matching.
+- Qdrant is optional and not part of the working baseline. Consider it only for semantic candidate retrieval over approved product/classification references after the dataset exists; keep authoritative exact/rule lookups and final review outside vector similarity.
+- Preserve existing source documents and generated evidence. Do not overwrite an active engine installation during upgrades.
+
+## Repository map
+
+- `app/` local Python invoice preparation, extraction and supervision
+- `config/` schema, prompt and runtime configuration
+- `deployment/` PowerShell installation, environment check, release verification and scheduled-task setup
+- `docs/` reference deployment, acceptance, operations and customs-entry plan
+- `power-automate/` cloud flow setup and export requirements
+- `tests/` executable regression tests
+- `data/reference/` placeholder contract for future approved HTS/PGA/OGA data; no real dictionary is included
+- `src/` and existing sanitized samples contain the earlier JavaScript prototype; Python engine under `app/` is the active local-model runtime

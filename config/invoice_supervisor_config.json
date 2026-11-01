@@ -1,0 +1,12 @@
+{
+  "config_version": 2,
+  "intake_directory": null,
+  "poll_interval_seconds": 30,
+  "lm_studio_readiness_timeout_seconds": 5,
+  "stable_check_interval_seconds": 5,
+  "stable_checks": 2,
+  "prepare_timeout_seconds": 900,
+  "worker_process_timeout_seconds": 2100,
+  "log_max_bytes": 5000000,
+  "log_backup_count": 5
+}

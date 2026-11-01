@@ -30,3 +30,6 @@ pdfs/*.pdf
 .DS_Store
 Thumbs.db
 .vscode/settings.json
+# Python bytecode
+__pycache__/
+*.py[cod]
