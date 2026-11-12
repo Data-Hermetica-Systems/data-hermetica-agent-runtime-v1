@@ -1,0 +1,70 @@
+{
+  "invoices": [
+    {
+      "invoice_details": {
+        "invoice_number": "100245",
+        "invoice_date": "09.11.2026",
+        "customer_number": "40017",
+        "ship_to": "Bluewater Analytical Supply Inc.<br>2200 Harbor Point Road<br>Galveston, TX 77550<br>USA",
+        "bill_to": "Bluewater Analytical Supply Inc.<br>Accounts Payable<br>2200 Harbor Point Road<br>Galveston, TX 77550<br>USA",
+        "shipper_details": "Invoice issuer (shipper not explicitly labeled): Nordkamm Laborchemie GmbH<br>Hafenstrasse 12<br>21079 Hamburg<br>Germany"
+      },
+      "merchandise_items": [
+        {
+          "item": "1",
+          "product_number": "90418277",
+          "material_description": "0.1 M Sodium hydroxide solution volumetric standard",
+          "unit": "EA",
+          "quantity": "12.000",
+          "unit_price_usd": "6.2500",
+          "unit_price_raw": "6.2500 / EA",
+          "price_basis_quantity": "1",
+          "price_basis_unit": "EA",
+          "total_amount_usd": "75.00",
+          "country_of_origin": "Germany",
+          "delivery_note": "55120934",
+          "gross_weight": "1,152 KG",
+          "net_weight": "0,720 KG",
+          "commodity_code": "28151200",
+          "shipment_number": "4400218806"
+        },
+        {
+          "item": "2",
+          "product_number": "90418301",
+          "material_description": "Sodium hypochlorite solution, reagent grade, 10-15% available chlorine",
+          "unit": "EA",
+          "quantity": "4.000",
+          "unit_price_usd": "42.7500",
+          "unit_price_raw": "42.7500 / EA",
+          "price_basis_quantity": "1",
+          "price_basis_unit": "EA",
+          "total_amount_usd": "171.00",
+          "country_of_origin": "Germany",
+          "delivery_note": "55120934",
+          "gross_weight": "5,400 KG",
+          "net_weight": "4,840 KG",
+          "commodity_code": "28289000",
+          "shipment_number": "4400218806"
+        },
+        {
+          "item": "3",
+          "product_number": "90527114",
+          "material_description": "Sodium chloride, analytical grade, crystalline solid",
+          "unit": "KG",
+          "quantity": "25.000",
+          "unit_price_usd": "6.3040",
+          "unit_price_raw": "6.3040 / KG",
+          "price_basis_quantity": "1",
+          "price_basis_unit": "KG",
+          "total_amount_usd": "157.60",
+          "country_of_origin": "Germany",
+          "delivery_note": "55120935",
+          "gross_weight": "26,300 KG",
+          "net_weight": "25,000 KG",
+          "commodity_code": "25010099",
+          "shipment_number": "4400218806"
+        }
+      ]
+    }
+  ]
+}

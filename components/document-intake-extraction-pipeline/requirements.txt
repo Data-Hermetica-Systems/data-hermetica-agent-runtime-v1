@@ -1,0 +1,6 @@
+# Runtime: the pipeline uses only the Python 3.12 standard library.
+# External programs (not Python packages): Poppler (pdfinfo, pdftotext, pdftoppm) and an
+# OpenAI-compatible local inference server. See docs/operations.md.
+
+# Development
+ruff==0.16.9
