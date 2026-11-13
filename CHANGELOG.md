@@ -6,7 +6,7 @@ All notable changes to this repository are documented in this file. The format f
 
 ### Added
 
-- System README and system architecture for Alembic, the DATA HERMETICA AI Automation Engine and HTS Evidence Platform.
+- System README and system architecture for the DATA HERMETICA Logistics Automation Engine and HTS Evidence Platform.
 - Document Intake & Extraction Pipeline 1.2.0 with source, tests, sample material and documentation.
 - Component specifications and architecture diagrams for the Pipeline Observability Dashboard, HTS Classification Evidence Engine, PGA Reference Reconciliation, Extraction Rules Governance and Governed MCP Tool Server.
 - Continuous integration for the document pipeline on Linux and Windows.

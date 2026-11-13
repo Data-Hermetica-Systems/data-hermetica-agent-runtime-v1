@@ -1,4 +1,4 @@
-# Alembic system architecture
+# System architecture
 
 ## Data plane
 
