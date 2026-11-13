@@ -1,8 +1,8 @@
-# DATA HERMETICA Logistics Automation Engine and HTS Evidence Platform
+# DATA HERMETICA Logistics AI Automation Engine and HTS Evidence Platform
 
 Private, locally operated automation that turns trade documents into validated data and classification evidence for licensed customs brokers.
 
-![License: Proprietary](https://img.shields.io/badge/License-Proprietary-0b1f3a) ![Python 3.12](https://img.shields.io/badge/Python-3.12-0b1f3a) ![CI](https://github.com/Data-Hermetica-Systems/data-hermetica-logistics-automation-engine/actions/workflows/ci.yml/badge.svg)
+![License: Proprietary](https://img.shields.io/badge/License-Proprietary-0b1f3a) ![Python 3.12](https://img.shields.io/badge/Python-3.12-0b1f3a) ![CI](https://github.com/Data-Hermetica-Systems/data-hermetica-logistics-ai-automation-engine/actions/workflows/ci.yml/badge.svg)
 
 ## System
 
