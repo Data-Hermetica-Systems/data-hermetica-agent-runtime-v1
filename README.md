@@ -2,7 +2,7 @@
 
 Private, locally operated automation that turns trade documents into validated data and classification evidence for licensed customs brokers.
 
-![License: Proprietary](https://img.shields.io/badge/License-Proprietary-0b1f3a) ![Python 3.12](https://img.shields.io/badge/Python-3.12-0b1f3a) ![CI](https://github.com/Data-Hermetica-Systems/ai-automation-engine-hts-evidence-platform/actions/workflows/ci.yml/badge.svg)
+![License: Proprietary](https://img.shields.io/badge/License-Proprietary-0b1f3a) ![Python 3.12](https://img.shields.io/badge/Python-3.12-0b1f3a) ![CI](https://github.com/Data-Hermetica-Systems/alembic-agentic-logistics/actions/workflows/ci.yml/badge.svg)
 
 ## System
 
