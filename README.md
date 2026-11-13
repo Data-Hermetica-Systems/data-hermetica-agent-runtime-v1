@@ -1,4 +1,4 @@
-# DATA HERMETICA AI Automation Engine and HTS Evidence Platform
+# Alembic — DATA HERMETICA AI Automation Engine and HTS Evidence Platform
 
 Private, locally operated automation that turns trade documents into validated data and classification evidence for licensed customs brokers.
 
@@ -25,7 +25,7 @@ flowchart TD
 
 Entry preparation depends on data locked inside supplier documents and on classification work that must be defensible line by line. This system automates the mechanical part of both and keeps every decision with the licensed broker. Documents are received through a governed Power Automate flow and extracted by a model that runs on the operator's own hardware; results are published only after deterministic validation. Classification research is assembled from official tariff sources, constrained to cited evidence, and returned as a suggestion with its reasoning trail. Reference data and extraction rules pass through approval gates with audit records before anything downstream can use them.
 
-The system is deployed in controlled operation on DATA HERMETICA infrastructure and is designed for installation on a broker-operated server inside the broker's environment.
+Alembic is the name of the system as a whole: like the distillation vessel it is named after, it takes raw material in and returns a refined, verifiable product. The system is deployed in controlled operation on DATA HERMETICA infrastructure and is designed for installation on a broker-operated server inside the broker's environment.
 
 ## Components
 
